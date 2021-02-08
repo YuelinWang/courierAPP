@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#f1e2e2"
+        app:contentPadding="1dp"
+        app:cardUseCompatPadding="false">
+
+        <RelativeLayout
+            android:id="@+id/order_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/order_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/notepad"/>
+
+            <TextView
+                android:id="@+id/order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/order_img"
+                android:text="单号:"
+                android:textColor="#f00"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/order_numval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/order_num"
+                android:text="1111111"
+                android:textColor="#f00"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/order_rname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/order_num"
+                android:layout_toRightOf="@+id/order_img"
+                android:text="收件人:"
+                android:textColor="#f00"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/order_rnameval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/order_num"
+                android:layout_toRightOf="@+id/order_rname"
+                android:text="收件人名称:"
+                android:textColor="#f00"
+                android:textSize="12sp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

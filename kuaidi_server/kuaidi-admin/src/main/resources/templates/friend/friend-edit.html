@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head  th:include="magicalcoder/v001/include/head :: commonHead('friend编辑')"/>
+
+<body class="childrenBody layui-hide">
+<form class="layui-form" style="width:80%;">
+
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_id">
+        <label class="layui-form-label">id</label>
+        <div class="layui-input-block">
+            <input type="text" disabled="true" class="layui-input" name="id"  placeholder="主键自动生成，无需手动编辑,如果重置则变成增加数据"/>
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_uid">
+        <label class="layui-form-label">用户id</label>
+        <div class="layui-input-block">
+            <select name="uid"  data-url="admin/user_rest/search" data-id="id" data-text-fields="realname" class="magicalcoder-foreign-select2 layui-input" lay-ignore="true" lay-verify="magicalCoderVerify" magicalcoder-verify="" data-value=""  placeholder="用户id"><option value=""></option></select>
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_fid">
+        <label class="layui-form-label">好友id</label>
+        <div class="layui-input-block">
+            <select name="fid"  data-url="admin/user_rest/search" data-id="id" data-text-fields="realname" class="magicalcoder-foreign-select2 layui-input" lay-ignore="true" lay-verify="magicalCoderVerify" magicalcoder-verify="" data-value=""  placeholder="好友id"><option value=""></option></select>
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_time">
+        <label class="layui-form-label">添加好友时间</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="time" placeholder="请输入添加好友时间" lay-verify="magicalCoderVerify" magicalcoder-verify="" value="" />
+        </div>
+    </div>
+
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <div class="layui-input-block">
+            <button class="layui-btn security_edit_form_operate_save" lay-submit="" lay-filter="save">立即提交</button>
+            <button type="reset" class="layui-hide layui-btn layui-btn-primary" >重置</button>
+        </div>
+    </div>
+</form>
+    <div th:replace="magicalcoder/v001/include/main-js :: commonMain" />
+    <script type="text/javascript"  th:src="@{/assets/admin/friend/friend-edit.js}"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.SetCommentsActivity">
+
+    <include layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/viewpager"></include>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#f1e2e2"
+        app:contentPadding="1dp"
+        app:cardUseCompatPadding="false">
+
+       <EditText
+           android:id="@+id/setComments"
+           android:layout_width="match_parent"
+           android:layout_height="80dp"
+           android:scrollbars="vertical"
+           android:hint="这里输入要发送到朋友圈的信息"
+           android:gravity="top"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#f1e2e2"
+        app:contentPadding="1dp"
+        app:cardUseCompatPadding="false">
+
+        <Button
+            android:id="@+id/sendComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="发送"
+            android:textSize="20sp"/>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

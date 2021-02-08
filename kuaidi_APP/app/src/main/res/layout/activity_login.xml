@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.LoginActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/kuaidi"
+        android:layout_gravity="center"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_acount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">>
+
+        <EditText
+            android:id="@+id/et_acount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textAutoComplete"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:hint="用户名"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:id="@+id/et_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="密码"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <RadioGroup
+        android:id="@+id/rg_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rb_find"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="我要找"/>
+
+        <RadioButton
+            android:id="@+id/rb_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我要招"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/blue"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:text="登录"/>
+
+    <TextView
+        android:id="@+id/bt_lgn_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:text="还没注册?点这里"/>
+
+    <TextView
+        android:id="@+id/bt_lgn_setserver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimary"
+        android:text="设置服务器"/>
+</LinearLayout>

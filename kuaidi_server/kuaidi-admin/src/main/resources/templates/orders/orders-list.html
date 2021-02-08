@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head  th:include="magicalcoder/v001/include/head :: commonHead('orders列表')"/>
+<body class="childrenBody layui-hide">
+    <form class="layui-form queryForm">
+        <blockquote class="layui-elem-quote quoteBox security_list_query_form">
+            <form class="layui-form-item"><!--注意这个form最终会被layui删除-->
+                <div class="layui-inline security_list_query_param_number">
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" data-name="number" name="numberFirst" placeholder="快递单号" />
+                    </div>
+                </div>
+                <div class="layui-inline security_list_query_param_uid">
+                    <div class="layui-input-inline">
+                        <select  data-name="uid" class="magicalcoder-foreign-select2 layui-input" lay-ignore="true" name="uidFirst" style="height:30px;width: 200px" data-url="admin/user_rest/search" data-id="id" data-text-fields="realname" placeholder="寄件人id"><option value=""></option></select>
+                    </div>
+                </div>
+                <div class="layui-inline security_list_query_param_state">
+                    <div class="layui-input-inline">
+                        <select data-name="state" name="stateFirst" class="layui-input">
+                                <option value="0" >快递中</option>
+                                <option value="1" >已派件</option>
+                                <option value="2" >已签收</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline security_list_query_operate_search">
+                    <a class="layui-btn search_btn" data-type="reload">搜索</a>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+                <div class="layui-inline security_list_query_operate_add_news">
+                    <a class="layui-btn layui-btn-normal addNews_btn">添加</a>
+                </div>
+                <div class="layui-inline security_list_query_operate_del_all">
+                    <a class="layui-btn layui-btn-danger layui-btn-normal delAll_btn">批量删除</a>
+                </div>
+            </form>
+        </blockquote>
+        <table class="security_list_table" id="newsList" lay-filter="newsListFilter" data-primary-fields="id"></table>
+        <script type="text/html" id="stateTemplate">
+            <select class="magicalcoder-table-single-select2 security_list_table_form_state" name="state" lay-ignore="true" data-identify="{{= d.id }}" lay-verify="magicalCoderVerify" magicalcoder-verify=""  placeholder="订单状态">
+                {{#  if(d.state+"" == "0"){ 		 }}
+                <option value="0" selected="selected">快递中</option>
+                {{#  }else{							}}
+                <option value="0">快递中</option>
+                {{#  } 								}}
+                {{#  if(d.state+"" == "1"){ 		 }}
+                <option value="1" selected="selected">已派件</option>
+                {{#  }else{							}}
+                <option value="1">已派件</option>
+                {{#  } 								}}
+                {{#  if(d.state+"" == "2"){ 		 }}
+                <option value="2" selected="selected">已签收</option>
+                {{#  }else{							}}
+                <option value="2">已签收</option>
+                {{#  } 								}}
+            </select>
+        </script>
+        <!--操作-->
+        <script type="text/html" id="newsListOperateTemplate">
+            <a class="layui-btn layui-btn-sm security_list_table_operate_edit" lay-event="edit">编辑</a>
+            <a class="layui-btn layui-btn-sm security_list_table_operate_children" lay-event="children">物流信息</a>
+            <a class="layui-btn layui-btn-sm layui-btn-danger security_list_table_operate_del" lay-event="del">删除</a>
+        </script>
+    </form>
+    <div th:replace="magicalcoder/v001/include/main-js :: commonMain" />
+    <script type="text/javascript"  th:src="@{/assets/admin/orders/orders-list.js}"></script>
+</body>
+</html>

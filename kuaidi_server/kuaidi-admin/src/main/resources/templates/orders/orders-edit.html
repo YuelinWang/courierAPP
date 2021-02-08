@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head  th:include="magicalcoder/v001/include/head :: commonHead('orders编辑')"/>
+
+<body class="childrenBody layui-hide">
+<form class="layui-form" style="width:80%;">
+
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_id">
+        <label class="layui-form-label">id</label>
+        <div class="layui-input-block">
+            <input type="text" disabled="true" class="layui-input" name="id"  placeholder="主键自动生成，无需手动编辑,如果重置则变成增加数据"/>
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_number">
+        <label class="layui-form-label">快递单号</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="number" placeholder="请输入快递单号" lay-verify="magicalCoderVerify" magicalcoder-verify="" value="" />
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_receiver">
+        <label class="layui-form-label">收货人</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="receiver" placeholder="请输入收货人" lay-verify="magicalCoderVerify" magicalcoder-verify="" value="" />
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_sender">
+        <label class="layui-form-label">发货人</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="sender" placeholder="请输入发货人" lay-verify="magicalCoderVerify" magicalcoder-verify="" value="" />
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_saddress">
+        <label class="layui-form-label">发货地址</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="saddress" placeholder="请输入发货地址" lay-verify="magicalCoderVerify" magicalcoder-verify="" value="" />
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_raddress">
+        <label class="layui-form-label">收获地址</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="raddress" placeholder="请输入收获地址" lay-verify="magicalCoderVerify" magicalcoder-verify="" value="" />
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_sphone">
+        <label class="layui-form-label">发货人手机号</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="sphone" placeholder="请输入发货人手机号" lay-verify="magicalCoderVerify" magicalcoder-verify="" value="" />
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_rphone">
+        <label class="layui-form-label">收货人手机号</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="rphone" placeholder="请输入收货人手机号" lay-verify="magicalCoderVerify" magicalcoder-verify="" value="" />
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_uid">
+        <label class="layui-form-label">寄件人id</label>
+        <div class="layui-input-block">
+            <select name="uid"  data-url="admin/user_rest/search" data-id="id" data-text-fields="realname" class="magicalcoder-foreign-select2 layui-input" lay-ignore="true" lay-verify="magicalCoderVerify" magicalcoder-verify="" data-value=""  placeholder="寄件人id"><option value=""></option></select>
+        </div>
+    </div>
+    <div class="layui-form-item layui-row layui-col-xs12 security_edit_form_param_state">
+        <label class="layui-form-label">状态</label>
+        <div class="layui-input-block">
+            <select name="state" class="layui-input" lay-verify="magicalCoderVerify" magicalcoder-verify=""  placeholder="订单状态">
+                <option value="0" selected="selected">快递中</option>
+                <option value="1" >已派件</option>
+                <option value="2" >已签收</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <div class="layui-input-block">
+            <button class="layui-btn security_edit_form_operate_save" lay-submit="" lay-filter="save">立即提交</button>
+            <button type="reset" class="layui-hide layui-btn layui-btn-primary" >重置</button>
+        </div>
+    </div>
+</form>
+    <div th:replace="magicalcoder/v001/include/main-js :: commonMain" />
+    <script type="text/javascript"  th:src="@{/assets/admin/orders/orders-edit.js}"></script>
+</body>
+</html>

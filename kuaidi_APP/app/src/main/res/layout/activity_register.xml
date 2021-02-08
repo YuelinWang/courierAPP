@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#dfdcdc">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="用户名:"
+            android:textSize="@dimen/rg_tv_fontsize"/>
+
+        <EditText
+            android:id="@+id/et_reg_acount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="@dimen/rg_et_fontsize"
+            android:singleLine="true"
+            android:maxLength="10"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#dfdcdc">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="登录密码:"
+            android:textSize="@dimen/rg_tv_fontsize"/>
+
+        <EditText
+            android:id="@+id/et_reg_pwd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_weight="3"
+            android:textSize="@dimen/rg_et_fontsize"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:hint="最多20个数"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#dfdcdc">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="确认密码:"
+            android:textSize="@dimen/rg_tv_fontsize" />
+
+        <EditText
+            android:id="@+id/et_confirm_pwd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:layout_weight="3"
+            android:textSize="@dimen/rg_et_fontsize"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:hint="最多20个数"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#dfdcdc">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="真实姓名:"
+            android:textSize="@dimen/rg_tv_fontsize"/>
+
+        <EditText
+            android:id="@+id/et_realname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="@dimen/rg_et_fontsize"
+            android:singleLine="true"
+            android:maxLength="10"
+            android:hint="最多10个数"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:background="#dfdcdc">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="身份证:"
+            android:textSize="@dimen/rg_tv_fontsize" />
+
+        <EditText
+            android:id="@+id/et_identityId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="@dimen/rg_et_fontsize"
+            android:singleLine="true"
+            android:maxLength="20"
+            android:hint="最多20个数"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#dfdcdc">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="手机:"
+            android:textSize="@dimen/rg_tv_fontsize"
+             />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="@dimen/rg_et_fontsize"
+            android:maxLength="11"
+            android:singleLine="true"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:background="#dfdcdc">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="年级:"
+            android:textSize="@dimen/rg_tv_fontsize"
+            />
+
+        <EditText
+            android:id="@+id/et_grade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textSize="@dimen/rg_et_fontsize"
+            android:maxLength="11"
+            android:singleLine="true"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:background="#dfdcdc">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="个人介绍:"
+            android:textSize="@dimen/rg_tv_fontsize"/>
+
+        <EditText
+            android:id="@+id/et_reg_nicheng"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="3"
+            android:textSize="@dimen/rg_et_fontsize"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:maxLength="10"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/blue"
+        android:textSize="@dimen/rg_bt_fontsize"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:text="注册"/>
+
+</LinearLayout>

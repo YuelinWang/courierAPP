@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rg_et_fontsize">16sp</dimen>
+    <dimen name="rg_tv_fontsize">16sp</dimen>
+    <dimen name="rg_bt_fontsize">16sp</dimen>
+</resources>
